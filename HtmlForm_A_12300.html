@@ -3,45 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Form - 12111</title>
+  <title>HTML Form - 12300</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <ul class="menu">
-      <li><a href="HtmlCssBasic_A_12111.html">Kembali ke Halaman Utama</a></li>
-      <li><a href="JSBasic_A_12111.html">Halaman Javascript</a></li>
+      <li><a href="HtmlCssBasic_A_12300.html">Kembali ke Halaman Utama</a></li>
+      <li><a href="JSBasic_A_12300.html">Halaman Javascript</a></li>
   </ul>
 
   <h2>Form Pendaftaran Mahasiswa</h2>
 
   <form onsubmit="return validateForm()">
     <table cellspacing="4" cellpadding="4">
-      <!-- TODO: Tambahkan field input teks untuk Nama Mahasiswa dengan tipe teks dan WAJIB DIISI. -->
+      <tr>
+      <!-- field input = Nama Mahasiswa, tipe teks, required = DONE -->
+        <td><strong>Nama Mahasiswa </strong></td>
+        <td><input required type="text" id="namaMahasiswa" name="nama" maxlength="50"> </td>
+      </tr>
+      <!-- field radio button = Jenis Kelamin (Laki-laki dan Perempuan), required = DONE -->
+      <tr>
+        <td><strong>Jenis Kelamin </strong></td>
+        <td>
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male"> Laki-laki </label>
 
-      <!-- TODO: Tambahkan field radio button untuk Jenis Kelamin (Laki-laki dan Perempuan) dan WAJIB DIISI -->
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female"> Perempuan </label>
+        </td>
+      </tr>
+      <!-- dropdown untuk Program Studi dengan id="prodi", required = DONE
+           opsi: "Pilih Prodi", "Informatika", "Teknik Industri", "Sistem Informasi" -->
+      <tr>
+        <td><strong>Program Studi </strong></td>
+        <td>
+          <select required id="Prodi" name="ProgramStudi" multiple>
+            <option value=null selected> Pilih Prodi </option>
+            <option value="Informatika"> Informatika </option>
+            <option value="Teknik Industri"> Teknik Industri </option>
+            <option value="Sistem Informasi"> Sistem Informasi </option>
+        </td>
+      </tr>
+      <tr>
+      <!-- field input = angka, Nomor Telepon, tipe number, required = DONE -->
+        <td><strong>Nomor Telepon </strong></td>
+        <td><input required type="number" id="inputNomorTelepon" name="nomorTelepon" maxlength="12"> </td>
+      </tr>
 
-      <!-- TODO: Tambahkan dropdown untuk Program Studi dengan id="prodi", 
-           opsi: "Pilih Prodi", "Informatika", "Teknik Industri", "Sistem Informasi" dan WAJIB DIISI. -->
+      <!-- field input tanggal = Tanggal Lahir, tipe date, required = DONE -->
+      <td><strong>Tanggal Lahir</strong></td>
+        <td><input required type="date" id="tanggalLahir" name="tanggalLahir"> </td>
 
-      <!-- TODO: Tambahkan field input angka untuk Nomor Telepon dengan tipe number dan WAJIB DIISI. -->
+      <!-- field input email, tipe email, required = DONE -->
+        <td><strong>Email</strong></td>
+        <td><input required type="email" id="email" name="email"> </td>
 
-      <!-- TODO: Tambahkan field input tanggal untuk Tanggal Lahir dengan tipe date dan WAJIB DIISI. -->
+      <!-- field input password = tipe password, required = DONE -->
+        <td><strong>Password</strong></td>
+        <td><input required type="password" id="password" name="password" minlength="8" maxlength="15"> </td>
 
-      <!-- TODO: Tambahkan field input email dengan tipe email dan WAJIB DIISI. -->
-
-      <!-- TODO: Tambahkan field input password dengan tipe password dan WAJIB DIISI. -->
-
-      <!-- TODO: Tambahkan fieldset untuk Hal Favorit, berisi:
+      <!-- checkbox untuk Hal Favorit, berisi:
            - Fieldset "Game" dengan checkbox untuk Roblox, Magic Chess, dan beberapa game lain yang ingin kamu tambahkan.
            - Fieldset "Film" dengan checkbox untuk Drama, Action, Romance, Comedy, Horror.
-       -->
+       = DONE -->
+      <tr>
+        <td><strong>Hal Favorit</strong></td>
+        <th><strong> Game </strong></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="checkbox" id="game1" name="game" value="Roblox">
+          <label for="game1">Roblox</label>
+
+          <input type="checkbox" id="game2" name="game" value="Magic Chess">
+          <label for="game2">Magic Chess</label>
+
+          <input type="checkbox" id="game3" name="game" value="Genshin Impact">
+          <label for="game3">Genshin Impact</label>
+
+          <input type="checkbox" id="game4" name="game" value="Sonic the Hedgehog">
+          <label for="game4">Sonic the Hedgehog</label>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <th><strong> film </strong></th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <input type="checkbox" id="film1" name="film" value="Drama">
+          <label for="film1">Drama</label>
+
+          <input type="checkbox" id="film2" name="film" value="Action">
+          <label for="film2">Action</label>
+
+          <input type="checkbox" id="film3" name="film" value="Romance">
+          <label for="film3">Romance</label>
+
+          <input type="checkbox" id="film4" name="film" value="Comedy">
+          <label for="film4">Comedy</label>
+
+          <input type="checkbox" id="film5" name="film" value="Horror">
+          <label for="film5">Horror</label>
+        </td>
+      </tr>
            
-      <!-- TODO: Tambahkan textarea untuk Deskripsi dengan id="deskripsi" dan WAJIB DIISI. -->
+      <!-- textarea = Deskripsi, id="deskripsi", required = DONE -->
+       <tr>
+        <td><textarea required id="deskripsi" name="deskripsi" rows="5" cols="40"></textarea></td>
+      </tr>
 
-      <!-- TODO: Tambahkan field input Foto dengan tipe file dan WAJIB DIISI. -->
+      <!-- field input = Foto, tipe file, required = DONE -->
+       <tr>
+        <td><strong>Foto </strong></td>
+        <td><input required type="file" id="foto" name="foto" accept=".jpeg,.png,.jpg"></td>
+      </tr>
 
-      <!-- TODO: Tambahkan tombol submit dengan id="simpan" dan value="Simpan". -->
-
+      <!-- tombol submit= id="simpan", value="Simpan" = DONE -->
+      <tr>
+        <input type="submit" id="simpan" value="Simpan">
+        <button type="submit"> Simpan </button>
+      </tr>
       <!-- Contoh Field input : 
             <tr>
               <td><strong>Nama Mahasiswa</strong></td>
