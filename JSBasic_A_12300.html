@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Basic - 12111</title>
+  <title>JS Basic - 12300</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <ul class="menu">
-      <li><a href="HtmlCssBasic_A_12111.html" >Kembali ke Halaman Utama</a></li>
-      <li><a href="HtmlForm_A_12111.html" >Halaman Form</a></li>
-      <!-- TODO: Pada bagian menu tambahkan Dialog box confirm ketika mengklik link tersebut. Clue : Gunakan OnClick dan return. -->
+      <li><a onclick="return confirm('Apakah Anda yakin ingin kembali ke Halaman Utama')" href="HtmlCssBasic_A_12300.html" >Kembali ke Halaman Utama</a></li>
+      <li><a onclick="return confirm('Apakah Anda yakin ingin kembali ke Halaman Form')" href="HtmlForm_A_12300.html" >Halaman Form</a></li>
+      <!-- add Dialog box confirm on link, use OnClick && return = DONE -->
   </ul>
 
   <h2>Belajar JavaScript Fundamental</h2>
@@ -38,14 +38,34 @@
   </div>
 
   <script>
+    // gunakan document.getElementById, paragraf.innerHTML, dan paragraf.style.color = DONE
+
      // TODO: Buat fungsi ubahBiru() untuk mengubah teks di elemen dengan id="teks" menjadi "Teks sudah berubah menjadi biru!" 
-     // dan warnanya menjadi biru.
-    
+     // dan warnanya menjadi biru. = DONE
+
+    function ubahBiru() {
+      const paragraf = document.getElementById("teks");
+      paragraf.style.color = "blue";
+      paragraf.innerHTML = "Teks sudah berubah menjadi biru!";
+    }
+
     // TODO: Buat fungsi ubahMerah() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna merah!" 
-    // dan warnanya menjadi merah.
+    // dan warnanya menjadi merah. = DONE
     
+    function ubahMerah() {
+      const paragraf = document.getElementById("teks");
+      paragraf.style.color = "red";
+      paragraf.innerHTML = "Sekarang teks berwarna merah!";
+    }
+
     // TODO: Buat fungsi ubahHijau() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna hijau!" 
-    // dan warnanya menjadi hijau.
+    // dan warnanya menjadi hijau. = DONE
+
+    function ubahHijau() {
+      const paragraf = document.getElementById("teks");
+      paragraf.style.color = "green";
+      paragraf.innerHTML = "Sekarang teks berwarna hijau!";
+    }
 
     // Clue ketiga function diatas : gunakan document.getElementById, paragraf.innerHTML, dan paragraf.style.color
     
@@ -54,12 +74,34 @@
     // Jika kosong, tampilkan alert "Silakan isi nama dulu." 
     // Jika ada isinya, tampilkan alert "Halo, [nama]! Selamat Belajar HTML & JS :D".
     // Clue : gunakan document.getElementById("inputNama").value dan gunakan statement if else.
+    // = DONE
+
+    function tampilkanNama() {
+      const nama = document.getElementById("inputNama").value;
+      if(nama == null) {
+        alert("Silakan isi nama dulu.");
+      } else {
+        alert("Halo, " + nama + "! Selamat Belajar HTML & JS :D");
+      }
+    }
+
     
     // TODO: Buat fungsi hitungKuadrat() yang mengambil nilai dari input dengan id="angka". 
     // Jika kosong, tampilkan pesan "Masukkan angka terlebih dahulu." di elemen dengan id="hasil". 
     // Jika ada isinya, hitung kuadrat angka tersebut dan tampilkan "Hasil kuadrat dari [angka] adalah [hasil]" 
     // di elemen dengan id="hasil".
     // Clue : gunakan document.getElementById("angka").value dan gunakan hasil.innerHTML.
+    // = DONE
+
+    function hitungKuadrat() {
+      const angka = document.getElementById("angka").value;
+      if(angka == null) {
+        alert("Masukkan angka terlebih dahulu.");
+      } else {
+        const hasil = angka * angka;
+        alert("Hasil kuadrat dari " + angka + " adalah " + hasil.innerHTML)
+      }
+    }
   </script>
 </body>
 </html>
