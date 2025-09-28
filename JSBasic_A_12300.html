@@ -77,8 +77,8 @@
     // = DONE
 
     function tampilkanNama() {
-      const nama = document.getElementById("inputNama").value;
-      if(nama == null) {
+      let nama = document.getElementById("inputNama").value;
+      if(nama == "") {
         alert("Silakan isi nama dulu.");
       } else {
         alert("Halo, " + nama + "! Selamat Belajar HTML & JS :D");
@@ -94,12 +94,15 @@
     // = DONE
 
     function hitungKuadrat() {
-      const angka = document.getElementById("angka").value;
-      if(angka == null) {
-        alert("Masukkan angka terlebih dahulu.");
+      let angka = document.getElementById("angka").value;
+      hasil.innerHTML = "";
+      if(angka == "") {
+        document.getElementById("hasil").innerHTML = "Masukkan angka terlebih dahulu.";
       } else {
-        const hasil = angka * angka;
-        alert("Hasil kuadrat dari " + angka + " adalah " + hasil.innerHTML)
+        angka = Number(angka);
+        let hasil = angka * angka;
+        angka = 
+        document.getElementById("hasil").innerHTML = "Hasil kuadrat dari " + angka + " adalah " + hasil;
       }
     }
   </script>

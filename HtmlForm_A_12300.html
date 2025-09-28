@@ -19,7 +19,7 @@
       <tr>
       <!-- field input = Nama Mahasiswa, tipe teks, required = DONE -->
         <td><strong>Nama Mahasiswa </strong></td>
-        <td><input required type="text" id="namaMahasiswa" name="nama" maxlength="50"> </td>
+        <td><input required type="text" id="namaMahasiswa" name="nama"></td>
       </tr>
       <!-- field radio button = Jenis Kelamin (Laki-laki dan Perempuan), required = DONE -->
       <tr>
@@ -37,31 +37,38 @@
       <tr>
         <td><strong>Program Studi </strong></td>
         <td>
-          <select required id="Prodi" name="ProgramStudi" multiple>
-            <option value=null selected> Pilih Prodi </option>
+          <select required id="Prodi" name="ProgramStudi">
+            <option value="" selected> Pilih Prodi </option>
             <option value="Informatika"> Informatika </option>
             <option value="Teknik Industri"> Teknik Industri </option>
             <option value="Sistem Informasi"> Sistem Informasi </option>
+          </select>
         </td>
       </tr>
       <tr>
       <!-- field input = angka, Nomor Telepon, tipe number, required = DONE -->
         <td><strong>Nomor Telepon </strong></td>
-        <td><input required type="number" id="inputNomorTelepon" name="nomorTelepon" maxlength="12"> </td>
+        <td><input required type="number" id="inputNomorTelepon" name="nomorTelepon"> </td>
       </tr>
-
-      <!-- field input tanggal = Tanggal Lahir, tipe date, required = DONE -->
-      <td><strong>Tanggal Lahir</strong></td>
+      <tr>
+        <!-- field input tanggal = Tanggal Lahir, tipe date, required = DONE -->
+        <td><strong>Tanggal Lahir</strong></td>
         <td><input required type="date" id="tanggalLahir" name="tanggalLahir"> </td>
-
+      </tr>
+      
       <!-- field input email, tipe email, required = DONE -->
+      <tr>
         <td><strong>Email</strong></td>
         <td><input required type="email" id="email" name="email"> </td>
+      </tr>
+      
 
       <!-- field input password = tipe password, required = DONE -->
+      <tr>
         <td><strong>Password</strong></td>
         <td><input required type="password" id="password" name="password" minlength="8" maxlength="15"> </td>
-
+      </tr>
+      
       <!-- checkbox untuk Hal Favorit, berisi:
            - Fieldset "Game" dengan checkbox untuk Roblox, Magic Chess, dan beberapa game lain yang ingin kamu tambahkan.
            - Fieldset "Film" dengan checkbox untuk Drama, Action, Romance, Comedy, Horror.
@@ -75,13 +82,28 @@
         <td>
           <input type="checkbox" id="game1" name="game" value="Roblox">
           <label for="game1">Roblox</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="game2" name="game" value="Magic Chess">
           <label for="game2">Magic Chess</label>
+          </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="game3" name="game" value="Genshin Impact">
           <label for="game3">Genshin Impact</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="game4" name="game" value="Sonic the Hedgehog">
           <label for="game4">Sonic the Hedgehog</label>
         </td>
@@ -95,23 +117,44 @@
         <td>
           <input type="checkbox" id="film1" name="film" value="Drama">
           <label for="film1">Drama</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="film2" name="film" value="Action">
           <label for="film2">Action</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="film3" name="film" value="Romance">
           <label for="film3">Romance</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="film4" name="film" value="Comedy">
           <label for="film4">Comedy</label>
+        </td>
+      </tr>
 
+      <tr>
+        <td></td>
+        <td>
           <input type="checkbox" id="film5" name="film" value="Horror">
           <label for="film5">Horror</label>
         </td>
       </tr>
            
       <!-- textarea = Deskripsi, id="deskripsi", required = DONE -->
-       <tr>
+      <tr>
+        <td><strong>Deskripsi</strong></td>
         <td><textarea required id="deskripsi" name="deskripsi" rows="5" cols="40"></textarea></td>
       </tr>
 
@@ -123,8 +166,7 @@
 
       <!-- tombol submit= id="simpan", value="Simpan" = DONE -->
       <tr>
-        <input type="submit" id="simpan" value="Simpan">
-        <button type="submit"> Simpan </button>
+        <td colspan="2"><input type="submit" id="simpan" value="Simpan"></td>
       </tr>
       <!-- Contoh Field input : 
             <tr>
